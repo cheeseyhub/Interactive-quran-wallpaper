@@ -14,7 +14,7 @@ To change the type of Quran script:
 
 
 ## About Version 1
-  It is a version without slider, cover , and you would have to click through all the pages.
+  It is a version without a slider, cover, and you would have to click through all the pages.
 
 ## About Version 2
-  It is a version with slider at the bottom to scroll through many pages and it also has a black cover.(recommended)
+  It is a version with the slider at the bottom to scroll through many pages and it also has a black cover. (recommended)
