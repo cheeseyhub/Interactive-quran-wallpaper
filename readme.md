@@ -2,7 +2,7 @@
 
 ## Requires lively wallpaper app to be installed
 
-add the index.html path to your lively wallpaper and enjoy !!! 😊😊
+Add the index.html path to your lively wallpaper and enjoy !!! 😊😊
 
 To change the type of quran script:
 
