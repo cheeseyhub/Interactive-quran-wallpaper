@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "Quran_Urdu_Script_tab",
+  "version": "1.0",
+  "description": "A fully interactable urdu script quran tab",
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+  "permissions": ["tabs", "storage"]
+}

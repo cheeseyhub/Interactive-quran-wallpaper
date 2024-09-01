@@ -31,7 +31,7 @@
       </div>
 
       <div id="slider-bar" class="turnjs-slider">
-        <div id="slider"></div>
+        <input id="slider" type="range" min="1" max="862" value="1" />
       </div>
     </div>
 
@@ -85,36 +85,18 @@
         });
 
         // Slider
+        document
+          .getElementById("slider")
+          .addEventListener("input", function () {
+            var sliderValue = this.value;
+            var min = this.min;
+            var max = this.max;
+            var percentage = (sliderValue / max) * 100;
 
-        $("#slider").slider({
-          min: 1,
-          max: 100,
-
-          start: function (event, ui) {
-            if (!window._thumbPreview) {
-              _thumbPreview = $("<div />", { class: "thumbnail" }).html(
-                "<div></div>"
-              );
-              setPreview(ui.value);
-              _thumbPreview.appendTo($(ui.handle));
-            } else setPreview(ui.value);
-
-            moveBar(false);
-          },
-
-          slide: function (event, ui) {
-            setPreview(ui.value);
-          },
-
-          stop: function () {
-            if (window._thumbPreview) _thumbPreview.removeClass("show");
-
-            $(".sample-docs").turn(
-              "page",
-              Math.max(1, $(this).slider("value") * 2 - 2)
-            );
-          },
-        });
+            // Update the background gradient based on the slider's value
+            this.style.background = `linear-gradient(to left, #3f3 ${percentage}%, #000 ${percentage}%)`;
+            $(".sample-docs").turn("page", sliderValue);
+          });
 
         // URIs
 
@@ -249,7 +231,7 @@
 
       yepnope({
         test: Modernizr.csstransforms,
-        yep: ["lib/turn.min.js", "css/jquery.ui.css"],
+        yep: ["lib/turn.min.js", "css/slider.css"],
         nope: ["lib/turn.html4.min.js", "css/jquery.ui.html4.css"],
         both: ["css/docs.css", "js/docs.js"],
         complete: loadApp,
