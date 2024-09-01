@@ -13,8 +13,7 @@ To change the type of Quran script:
 3. Then re-enter the file path into the lively wallpaper.
 
 
-## About Version 1
-  It is a version without a slider, cover, and you would have to click through all the pages.
+
 
 ## About Version 2
   It is a version with the slider at the bottom to scroll through many pages and it also has a black cover. (recommended)
